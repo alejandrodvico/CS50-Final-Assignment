@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" class="htmlstd html5">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Description" content="Propiedades de Recetas" />
+    <meta name="Description" lang="es" content="" />
+    <meta name="keywords" content="html5, css, Javascript, diseño web" />
+    <title>Reporte de Ingredientes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Indexcss.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #tabla-container {
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Properties Per Recipe</h1>
+
+    <div id="tabla-container">
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Recipe</th>
+                <th>Cost</th>
+                <th>SatFat</th>
+                <th>NonSatFat</th>
+                <th>HC</th>
+                <th>Sugar</th>
+                <th>Proteins</th>
+                <th>Sodio</th>
+                <th>Calcio</th>
+                <th>Colesterol</th>
+                <th>Omega3</th>
+                <th>kCal</th>
+            </tr>
+            {% for receta in recetas %}
+            <tr>
+                <td>{{ receta[0] }}</td>
+                <td>{{ receta[1] }}</td>
+                <td>{{ receta[2] }}</td>
+                <td>{{ receta[3] }}</td>
+                <td>{{ receta[4] }}</td>
+                <td>{{ receta[5] }}</td>
+                <td>{{ receta[6] }}</td>
+                <td>{{ receta[7] }}</td>
+                <td>{{ receta[8] }}</td>
+                <td>{{ receta[9] }}</td>
+                <td>{{ receta[10] }}</td>
+                <td>{{ receta[11] }}</td>
+                <td>{{ receta[12] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+
+</html>

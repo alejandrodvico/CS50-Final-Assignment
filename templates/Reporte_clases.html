@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" class="htmlstd html5">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Description" content="Reporte de Clases de Recetas" />
+    <meta name="Description" lang="es" content="" />
+    <meta name="keywords" content="html5, css, Javascript, diseño web" />
+    <title>Reporte de Unidades</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Indexcss.css') }}">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Reporte de Clases de Recetas</h1>
+
+    <div id="tabla-container">
+        <table>
+            <tr>
+                <th>Clase</th>
+            </tr>
+            {% for clase in clases %}
+            <tr>
+                <td>{{ clase[1] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+
+</html>

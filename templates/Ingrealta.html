@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es" class="htmlstd html5">
+<head>
+    <meta charset="charset=UTF-8"/>
+    <meta name="Description" content="Trabajo Final Gourmet CS50"/>
+    <meta name="Description" lang="es" content="">
+    <meta name="keywords" content="html5, css, Javascript, diseño web"/>
+    <title>Trabajo Final Curse CS50 Introduction to Computer Science</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Indexcss.css') }}">
+</head>
+<body>
+    <div class="ImagenTitulo1-cont">
+        <img src="{{ url_for('static', filename='HYBRID_LOGO.PNG') }}">
+    </div>
+    <div class="ImagenTitulo2-cont">
+        <img src="{{ url_for('static', filename='HYBRID_LOGO.PNG') }}">
+    </div>
+    <div class="rectangulo"></div>
+    <header id="cabeceraIndex">
+        <p id="titulo">Gourmet CS50</p>
+    </header>
+    <div class="menu">
+        <button class="buttonmenu" onclick="location.href='ingredientes'">Volver</button>
+    </div>
+    <nav></nav>
+    <aside></aside>
+    <p id="titulo-listasIngredientes">Nuevo Ingrediente</p>
+    <!----------------------------------------------------------------------------------------------------------------------->
+    <section>
+        <form id="formNuevoIngrediente" method="post" action="{{ url_for('validar_ingre') }}">
+            <div class="ingrecontainer">
+                <label for="nombre_ingre">Nombre del Ingrediente:</label>
+                <input type="text" id="nombre_ingre" name="nombre_ingre" required>
+                <div>
+                    <label for="unidadComboBox">Unidad:</label>
+                    <select id="unidadComboBox" name="unidadComboBox" required>
+                        {% for unidad in unidades %}
+                            <option value="{{ unidad[0] }}">{{ unidad[1] }}</option>
+                        {% endfor %}
+                    </select>
+                <div>
+                    <label class=label2 for="costo">Costo:</label>
+                    <input type="text" id="costo" name="costo">
+                </div>
+                <div>
+                    <label class=label2 for="fecha">Fecha:</label>
+                    <input type="text" id="fecha" name="fecha">
+                </div>
+                <div>                
+                    <label class=label2 for="comercio">Comercio:</label>
+                    <input type="text" id="comercio" name="comercio">
+                </div>
+                <div>                
+                    <label class=label2 for="fecha">Fecha:</label>
+                    <input type="text" id="fecha" name="fecha">
+                </div>
+                <div>                
+                    <label class=label2 for="comercio">Comercio:</label>
+                    <input type="text" id="comercio" name="comercio">
+                </div>
+                <div>                
+                    <label class=label2 for="grasasSat">Grasas Sat:</label>
+                    <input type="text" id="grasasSat" name="grasasSat">
+                </div>
+                <div>                
+                    <label class=label2 for="grasasNosat">Grasas No Sat:</label>
+                    <input type="text" id="grasasNosat" name="grasasNosat">
+                </div>
+                <div>                
+                    <label class=label2 for="hc">HC:</label>
+                    <input type="text" id="hc" name="hc">
+                </div>
+                <div>                
+                    <label class=label2 for="azucares">Azucares:</label>
+                    <input type="text" id="azucares" name="azucares">
+                </div>
+                <div>                
+                    <label class=label2 for="proteinas">Proteinas:</label>
+                    <input type="text" id="proteinas" name="proteinas">
+                </div>
+                <div>                
+                    <label class=label2 for="sal">Sal:</label>
+                    <input type="text" id="sal" name="sal">
+                </div>
+                <div>                
+                    <label class=label2 for="calcio">Calcio:</label>
+                    <input type="text" id="calcio" name="calcio">
+                </div>
+                <div>                
+                    <label class=label2 for="colesterol">Colesterol:</label>
+                    <input type="text" id="colesterol" name="colesterol">
+                </div>
+                <div>                
+                    <label class=label2 for="omega3">Omega 3:</label>
+                    <input type="text" id="omega3" name="omega3">
+                </div>
+                <div>
+                    <label class=label2 for="kcal">kCal:</label>
+                    <input type="text" id="kcal" name="kcal">
+                </div>
+                <button type="submit" class="buttonabmunidades">Agregar</button>
+            </div>
+        </form>
+        <style>
+            .mensaje-container {
+                margin-top: 20px;
+                text-align: center;
+                position: absolute;
+                top:550px;
+                left:700px;
+            }
+
+            #mensaje {
+                margin-bottom: 10px;
+                display: inline-block;
+            }
+
+            #okButton {
+                display: none;
+                margin-top: 10px;
+                display: inline-block;
+            }
+        </style>
+        <div class="rectangulo-container">
+            <div id="mensaje" class="mensaje-container">
+                {% if mensaje %}
+                    {{ mensaje }}
+                    <br>
+                    <button id="okButton" onclick="ocultarMensaje()" class="buttonabmunidades">OK</button>
+                {% endif %}
+            </div>
+        </div> 
+    </section>
+
+    <footer id="text-footer">
+        Trabajo Final De Curso CS50 Introduction To Computer Science
+    </footer>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('mensaje').style.display = 'inline-block';
+            document.getElementById('okButton').style.display = 'inline-block';
+        }
+
+        function ocultarMensaje() {
+            document.getElementById('mensaje').style.display = 'none';
+            document.getElementById('okButton').style.display = 'none';
+        }
+
+        function mostrarError(mensaje) {
+            document.getElementById('mensaje').innerHTML = mensaje;
+            document.getElementById('mensaje').style.display = 'inline-block';
+            document.getElementById('okButton').style.display = 'inline-block';
+        }
+
+    </script>
+
+</body>
+</html>

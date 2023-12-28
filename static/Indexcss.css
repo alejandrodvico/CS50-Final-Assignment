@@ -1,0 +1,811 @@
+@charset "utf-8";
+
+#cabeceraIndex{
+    background-color:black;
+    height:110px;
+}
+
+#titulo{
+    margin-top: 40px;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.rectangulo {
+    margin-top: 118px;
+    position: absolute;
+    top: 0px;
+    width:99%;
+    height: 40px; /* Altura del rectángulo */
+    background-color:rgb(97, 134, 34); /* Color de fondo */
+}
+
+#titulo-listasUnidades{
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 110px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#titulo-Nueva{
+    margin-top: 170px;
+    position: absolute;
+    top: 100px;
+    left: 230px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-Borrar{
+    margin-top: 170px;
+    position: absolute;
+    top: 171px;
+    left: 230px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-Editar{
+    margin-top: 170px;
+    position: absolute;
+    top: 242px;
+    left: 230px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-Imprimir{
+    margin-top: 170px;
+    position: absolute;
+    top: 314px;
+    left: 260px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#titulo-listasIngredientes{
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 130px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#titulo-listasRecetas{
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#titulo-listasPlatos{
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 110px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#titulo-listasMenues{
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 110px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#titulo-UnidadNueva{
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ImagenTitulo1-cont{
+    margin-top: 0px;
+    margin-left: 0px;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    transform: scale(0.3);
+}
+
+.ImagenTitulo2-cont{
+    margin-top: 0px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transform: scale(0.3);
+}
+
+footer{
+    background-color:black;
+    height:30px;
+    clear: both;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 99%
+}
+
+#text-footer{
+    font-size: 20px;
+    color: white;
+}
+
+nav{
+    background-color:lightgrey;
+    float: left;
+    height:600px;
+    width: 200px;
+}
+
+aside{
+    background-color:lightgrey;
+    float: right;
+    height:600px;
+    width: 200px;
+}
+
+section{
+    height:0px;
+    margin: 210px;
+}
+
+.ImagenTapa-cont {
+    position:absolute;
+    top: 130px;
+    left: 200px;
+    transform: scale(0.7);
+}
+
+.menu {
+    position:absolute;
+    top: 118px;
+    left: 8px;
+    display:flex;
+    justify-content:left;
+    width: 120px;
+}
+
+.buttonmenu {
+    padding: 10px 30px;
+    height: 40px;
+    width: 120px;
+    background-color:lawngreen;
+    color: black;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.buttonmenu:hover {
+    background-color:limegreen;
+}
+
+.buttonabm {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    position: absolute;
+    top:452px;
+    left:1084px;
+}
+
+.buttonabm:hover {
+    background-color: darkgray; /* Cambia el color al pasar el mouse sobre el botón */
+}
+
+#text-intro-title-cont {
+    position:absolute;
+    top: 500px;
+    left: 420px;
+    right: 250px;
+    justify-content:right;
+    font-size: 18px;
+    color: black;
+    font-weight: bold 
+}
+#text-intro-cont {
+    position:absolute;
+    top: 530px;
+    left: 420px;
+    right: 420px;
+    justify-content:right;
+    font-size: 14px;
+    color: black;
+}
+
+#unidadInput {
+    padding: 10px;
+    font-size: 14px;
+    height:0px;
+    position: sticky;
+}
+
+.buttonabmunidades {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.buttonabmunidades:hover {
+    background-color: darkgray; /* Cambia el color al pasar el mouse sobre el botón */
+}
+
+.formUnidades {
+    display: flex;
+    align-items: center;
+}
+
+.formUnidades div {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    position: absolute;
+    top:260px;
+    left:855px;
+}
+
+.buttonabmunidades {
+    margin-left: 10px; /* Espacio entre el campo de entrada y el botón */
+    width: 80px;
+}
+
+.formEliminarUnidad div {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    position: absolute;
+    top: 331px;
+    left: 960px;
+    height: 20px; /* Ajusta la altura según tus necesidades */
+}
+
+.formEliminarUnidad select {
+    vertical-align: middle;
+    height: 100%;
+    padding: 0px;
+    height: 20px;
+    width: 80px;
+}
+
+.buttonEliminarUnidad {
+    margin-left: 10px; /* Espacio entre el campo de entrada y el botón */
+}
+
+.okButton {
+    margin-left: 10px; /* Espacio entre el campo de entrada y el botón */
+}
+
+.mensaje-container {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    border-color: black;
+    border-width: 5px;
+    width:200px;
+    position: absolute;
+    top:20px;
+    left:600px;
+    border: black;
+}
+
+.formEditarUnidad div {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    position: absolute;
+    top:402px;
+    left:650px;
+    height: 20px;
+}
+
+.formEditarUnidad select {
+    width: 80px;
+}
+
+/* -------------------------------------------------------------------------------------*/
+
+#titulo-NuevoIngre{
+    margin-top: 170px;
+    position: absolute;
+    top: 100px;
+    left: 360px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-BorrarIngre{
+    margin-top: 170px;
+    position: absolute;
+    top: 171px;
+    left: 360px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-EditarIngre{
+    margin-top: 170px;
+    position: absolute;
+    top: 242px;
+    left: 360px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-ImprimirIngre{
+    margin-top: 170px;
+    position: absolute;
+    top: 314px;
+    left: 350px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menuIngre {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 300px;
+    left: 1000px;
+}
+
+.formEliminarIngre div {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    position: absolute;
+    top: 330px;
+    left: 835px;
+    height: 20px; /* Ajusta la altura según tus necesidades */
+}
+
+.formEliminarIngre select {
+    vertical-align: middle;
+    height: 100%;
+    padding: 0px;
+    height: 20px;
+    width: 180px;
+}
+
+.buttonEliminarIngre {
+    margin-left: 10px; /* Espacio entre el campo de entrada y el botón */
+}
+
+.buttonIngreNuevo {
+    position: absolute;
+    top: 259px;
+    left:1100px;
+}
+
+.buttonIngreModificar {
+    position: absolute;
+    top: 400px;
+    left:1100px;
+}
+
+.buttonIngreImprimir {
+    position: absolute;
+    top: 472px;
+    left:1100px;
+}
+
+.rectangulo1 {
+    width: 700px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    top:255px;
+    left:500px;
+}
+
+.rectangulo2 {
+    width: 700px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    top: 326px;px;
+    left:500px;
+}
+
+.rectangulo3 {
+    width: 700px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    top:397px;
+    left:500px;
+}
+
+.rectangulo4 {
+    width: 700px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    top:468px;
+    left:500px;
+}
+
+.ingrecontainer {
+    width:900px;
+    position: absolute;
+    top:300px;
+    left:250px;
+}
+
+#unidadComboBox {
+    vertical-align: middle;
+    height: 100%;
+    padding: 0px;
+    height: 20px;
+    width: 80px;
+}
+
+.ingrecontainer {
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.label2 {
+    display:contents;
+    margin-bottom: 5px;
+    grid-column: span 3;
+}
+/*--------------------------------------------------------------------------------------*/
+#titulo-ActualizIngredientes {
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#nombre_ingre {
+    width: 250px;
+}
+
+#titulo-listaRecetas {
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#titulo-ClaseNueva{
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#titulo-Imprimir-clases {
+    margin-top: 170px;
+    position: absolute;
+    top: 314px;
+    left: 250px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.formClases div {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    position: absolute;
+    top:260px;
+    left:885px;
+}
+
+.formEliminarClase div {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    position: absolute;
+    top: 331px;
+    left: 970px;
+    height: 20px; /* Ajusta la altura según tus necesidades */
+}
+
+.formEliminarClase select {
+    vertical-align: middle;
+    height: 100%;
+    padding: 0px;
+    height: 20px;
+    width: 80px;
+}
+
+.buttonEliminarClase {
+    margin-left: 10px; /* Espacio entre el campo de entrada y el botón */
+}
+
+.formEditarClase div {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    position: absolute;
+    top:402px;
+    left:660px;
+    height: 20px;
+}
+
+.formEditarClase select {
+    width: 80px;
+}
+
+#titulo-listaRecetas {
+    margin-top: 170px;
+    position: absolute;
+    top: 0px;
+    left: 170px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.rectangulo1receta {
+    width: 400px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    top:255px;
+    left:800px;
+}
+
+.rectangulo2receta {
+    width: 400px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    top: 326px;px;
+    left:800px;
+}
+
+.rectangulo3receta {
+    width: 400px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    top:397px;
+    left:800px;
+}
+
+.rectangulo4receta {
+    width: 400px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    top:468px;
+    left:800px;
+}
+
+#titulo-NuevoReceta {
+    margin-top: 170px;
+    position: absolute;
+    top: 100px;
+    left: 635px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-BorrarReceta {
+    margin-top: 170px;
+    position: absolute;
+    top: 171px;
+    left: 635px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-EditarReceta {
+    margin-top: 170px;
+    position: absolute;
+    top: 242px;
+    left: 635px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titulo-ImprimirReceta {
+    margin-top: 170px;
+    position: absolute;
+    top: 314px;
+    left: 655px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.formEliminarReceta div {
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    position: absolute;
+    top: 331px;
+    left: 1015px;
+    height: 20px; /* Ajusta la altura según tus necesidades */
+}
+
+.formEliminarReceta select {
+    vertical-align: middle;
+    height: 100%;
+    padding: 0px;
+    height: 20px;
+    width: 80px;
+}
+
+.buttonEliminarReceta {
+    margin-left: 10px; /* Espacio entre el campo de entrada y el botón */
+}
+

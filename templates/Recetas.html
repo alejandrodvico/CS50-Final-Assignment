@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" class="htmlstd html5">
+<head>
+    <meta charset="charset=UTF-8"/>
+    <meta name="Description" content="Trabajo Final Gourmet CS50"/>
+    <meta name="Description" lang="es" content="">
+    <meta name="keywords" content="html5, css, Javascript, diseño web"/>
+    <title>Trabajo Final Curse CS50 Introduction to Computer Science</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Indexcss.css') }}">
+</head>
+<body>
+
+    <div class="ImagenTitulo1-cont">
+        <img src="{{ url_for('static', filename='HYBRID_LOGO.PNG') }}">
+    </div>
+    <div class="ImagenTitulo2-cont">
+        <img src="{{ url_for('static', filename='HYBRID_LOGO.PNG') }}">
+    </div>
+    <div class="rectangulo"></div>
+    <header id="cabeceraIndex">
+        <p id="titulo">Gourmet CS50</p>
+    </header>
+    <div class="menu">
+        <button class="buttonmenu" onclick="location.href='index'">Inicio</button>
+    </div>
+
+    <nav></nav>
+    <aside></aside>
+
+    <p id="titulo-listasRecetas">Lista de Recetas</p>
+    <p id="titulo-NuevoReceta">Nueva Receta:</p>
+    <p id="titulo-BorrarReceta">Borrar Receta:</p>
+    <p id="titulo-EditarReceta">Editar Receta:</p>
+    <p id="titulo-ImprimirReceta">Consultar Recetas:</p>
+
+    <div class="rectangulosRecetas">
+        <div class="rectangulo1receta"></div>
+        <div class="rectangulo2receta"></div>
+        <div class="rectangulo3receta"></div>
+        <div class="rectangulo4receta"></div>
+    </div>
+
+    <div class="buttonIngreNuevo">
+        <button class="buttonabmunidades" onclick="location.href='recetas_alta'">Nueva</button>
+    </div>
+    <div class="buttonIngreModificar">
+        <button class="buttonabmunidades" onclick="location.href='recetamodifi'">Modificar</button>
+    </div>
+    <div class="buttonIngreImprimir">
+        <button class="buttonabmunidades" onclick="location.href='reporte_recetas'">Consultar</button>
+    </div>
+
+    <section>
+        <article>
+            <div id="tabla-container">
+                <table>
+                    <tr>
+                        <th style="width: 200px;">Clases</th>
+                        <th style="width: 400px;">Recetas</th>
+                    </tr>
+                    {% for receta in recetas %}
+                        <tr>
+                            <td style="width: 200px;">{{ receta[1] }}</td>
+                            <td style="width: 400px;">{{ receta[2] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            <style>
+                #tabla-container {
+                    max-height: 470px; 
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    position: absolute;
+                    top:220px;
+                    left:230px;
+                    display:inline-flex;
+                }
+
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 500px; 
+                }
+
+                th, td {
+                    border: 1px solid #dddddd;
+                    text-align: center;
+                    padding: 8px;
+                }
+
+                th {
+                    border: 1px solid #dddddd;
+                    text-align: center;
+                    padding: 8px;
+                    background-color: black;
+                    color: white;
+                    position: sticky;
+                    top: 0;
+                }
+
+                tr:nth-child(even) {
+                    background-color: #dddddd;
+                }
+            </style>
+            
+            <form method="post" action="{{ url_for('eliminar_receta') }}" class="formEliminarReceta" onsubmit="return confirmarBorrado()">
+                <div class="RecetaBorrar">
+                    <label for="RecetaBorrar"></label>
+                    <select id="receta_id" name="receta_nombre" required>
+                        {% for receta in recetas %}
+                            <option value="{{ receta[2] }}">{{ receta[2] }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="buttonabmunidades">Borrar</button>
+                </div>
+            </form>        
+            <script>
+                function confirmarBorrado() {
+                    return confirm("¿Estás seguro de que quieres borrar esta receta?");
+                }
+            </script>
+        </article>
+    </section>
+
+    <footer id="text-footer">
+        Trabajo Final De Curso CS50 Introduction To Computer Science
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" class="htmlstd html5">
+<head>
+    <meta charset="charset=UTF-8"/>
+    <meta name="Description" content="Trabajo Final Gourmet CS50"/>
+    <meta name="Description" lang="es" content="">
+    <meta name="keywords" content="html5, css, Javascript, diseño web"/>
+    <title>Trabajo Final Curse CS50 Introduction to Computer Science</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Indexcss.css') }}">
+</head>
+<body>
+    <div class="ImagenTitulo1-cont">
+        <img src="{{ url_for('static', filename='HYBRID_LOGO.PNG') }}">
+    </div>
+    <div class="ImagenTitulo2-cont">
+        <img src="{{ url_for('static', filename='HYBRID_LOGO.PNG') }}">
+    </div>
+    <div class="rectangulo"></div>
+    <header id="cabeceraIndex">
+        <p id="titulo">Gourmet CS50</p>
+    </header>
+    
+    <div class="menu">
+        <button class="buttonmenu" onclick="location.href='unidades'">Unidades</button>
+        <button class="buttonmenu" onclick="location.href='ingredientes'">Ingredientes</button>
+        <div class="dropdown">
+            <button class="buttonmenu">Recetas</button>
+            <div class="dropdown-content">
+                <a href="clase_recetas">Clase de Recetas</a>
+                <a href="mostrar_recetas">Gestión De Recetas</a>
+                <a href="ingreXreceta">Gestión De Ingredientes Por Receta</a>
+                <a href="propiedades_recetas">Propiedades Por Receta</a>
+                <a href="receta_selec">Consulta De Recetas</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <nav></nav>
+    <aside></aside>
+
+    <section>
+        <article>
+            <div class="ImagenTapa-cont">
+                <img src="{{ url_for('static', filename='Foto_Tapa.jpg') }}">
+        </article>
+    </section>
+    <p id="text-intro-title-cont">El Placer De Alimentarse!</p>
+         <p id="text-intro-cont">En este espacio culinario, la innovación y la nutrición bailan juntas al ritmo de los paladares más exigentes. ¿Por qué elegir entre sabor y salud cuando puedes tener ambos? Mi aplicación, tu guía gourmet, se deleita en la diversidad y se nutre de la exclusividad.
+
+Aquí, nos sumergimos en un mundo donde los ingredientes frescos y las recetas exquisitas abrazan cada preferencia dietética: ya seas celíaco, vegano, vegetariano o sigas una dieta específica, hay un festín de sabores aguardando por ti. La esencia de cada plato está tejida con información nutricional detallada, brindándote no solo deleite al paladar, ¡sino también la certeza de un banquete saludable!
+
+Descubre, crea y comparte tus propias recetas mientras exploras un universo culinario diseñado para nutrir tu cuerpo y tu alma. ¡Bienvenidos a un viaje gastronómico sin límites, donde cada bocado es una celebración!
+
+¡Prepárate para desatar tu chef interior y deleitar a tus sentidos con lo mejor en cada plato!
+ </p>
+    <footer id="text-footer">
+        Trabajo Final De Curso CS50 Introduction To Computer Science
+    </footer>
+
+</body>
+</html>

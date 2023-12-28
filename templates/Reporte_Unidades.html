@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" class="htmlstd html5">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Description" content="Reporte de Unidades" />
+    <meta name="Description" lang="es" content="" />
+    <meta name="keywords" content="html5, css, Javascript, diseño web" />
+    <title>Reporte de Unidades</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Indexcss.css') }}">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Reporte de Unidades</h1>
+
+    <div id="tabla-container">
+        <table>
+            <tr>
+                <th>Unidad</th>
+            </tr>
+            {% for unidad in unidades %}
+            <tr>
+                <td>{{ unidad[1] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <footer id="text-footer">
+
+    </footer>
+
+</body>
+
+</html>

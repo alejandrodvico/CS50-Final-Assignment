@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" class="htmlstd html5">
+<head>
+    <meta charset="charset=UTF-8"/>
+    <meta name="Description" content="Trabajo Final Gourmet CS50"/>
+    <meta name="Description" lang="es" content="">
+    <meta name="keywords" content="html5, css, Javascript, diseño web"/>
+    <title>Trabajo Final Curse CS50 Introduction to Computer Science</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Indexcss.css') }}">
+</head>
+<body>
+    <div class="ImagenTitulo1-cont">
+        <img src="{{ url_for('static', filename='HYBRID_LOGO.PNG') }}">
+    </div>
+    <div class="ImagenTitulo2-cont">
+        <img src="{{ url_for('static', filename='HYBRID_LOGO.PNG') }}">
+    </div>
+    <div class="rectangulo"></div>
+    <header id="cabeceraIndex">
+        <p id="titulo">Gourmet CS50</p>
+    </header>
+    <div class="menu">
+        <button class="buttonmenu" onclick="location.href='index'">Inicio</button>
+    </div>
+    <nav></nav>
+    <aside></aside>
+
+    <p id="titulo-listasIngredientes">Lista de Ingredientes</p>
+    <p id="titulo-NuevoIngre">Nuevo Ingrediente:</p>
+    <p id="titulo-BorrarIngre">Borra Ingrediente:</p>
+    <p id="titulo-EditarIngre">Editar Ingrediente:</p>
+    <p id="titulo-ImprimirIngre">Consultar Tabla:</p>
+
+    <div class="rectangulosIngre">
+        <div class="rectangulo1"></div>
+        <div class="rectangulo2"></div>
+        <div class="rectangulo3"></div>
+        <div class="rectangulo4"></div>
+    </div>
+
+    <div class="buttonIngreNuevo">
+        <button class="buttonabmunidades" onclick="location.href='ingrealta'">Nuevo</button>
+    </div>
+    <div class="buttonIngreModificar">
+        <button class="buttonabmunidades" onclick="location.href='ingremodifi'">Modificar</button>
+    </div>
+    <div class="buttonIngreImprimir">
+        <button class="buttonabmunidades" onclick="location.href='reporte_ingre'">Imprimir</button>
+    </div>
+
+    <section>
+        <article>
+            <div id="tabla-container">
+                <table>
+                    <tr>
+                        <th>Ingredientes</th>
+                    </tr>
+                    {% for ingrediente in ingredientes %}
+                        <tr>
+                            <td>{{ ingrediente[1] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            <style>
+                #tabla-container {
+                    max-height: 470px; 
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    position: absolute;
+                    top:220px;
+                    left:230px;
+                    display:inline-flex;
+                }
+
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 250px; 
+                }
+
+                th, td {
+                    border: 1px solid #dddddd;
+                    text-align: center;
+                    padding: 8px;
+                }
+
+                th {
+                    border: 1px solid #dddddd;
+                    text-align: center;
+                    padding: 8px;
+                    background-color: black;
+                    color: white;
+                    position: sticky;
+                    top: 0;
+                }
+
+                tr:nth-child(even) {
+                    background-color: #dddddd;
+                }
+            </style>
+            
+            <form method="post" action="{{ url_for('eliminar_ingre') }}" class="formEliminarIngre" onsubmit="return confirmarBorrado()">
+                <div class="IngreBorrar">
+                    <label for="IngreBorrar">Ingrediente:</label>
+                    <select id="ingre_id" name="ingre_nombre" required>
+                        {% for ingrediente in ingredientes %}
+                            <option value="{{ ingrediente[1] }}">{{ ingrediente[1] }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="buttonabmunidades">Borrar</button>
+                </div>
+            </form>        
+            <script>
+                function confirmarBorrado() {
+                    return confirm("¿Estás seguro de que quieres borrar este ingrediente?");
+                }
+            </script>
+        </article>
+    </section>
+ 
+    <footer id="text-footer">
+        Trabajo Final De Curso CS50 Introduction To Computer Science
+    </footer>
+
+</body>
+</html>
